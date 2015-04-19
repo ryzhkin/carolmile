@@ -42,6 +42,11 @@
   font-family: arial, helvetica, sans-serif;
 }
 
+
+.cm-menu-top-links a.active {
+  color: #b4a20b;
+}
+
 .cm-menu-top-links a:first-child {
    border: none;
 }

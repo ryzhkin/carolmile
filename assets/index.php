@@ -32,18 +32,17 @@
 
 <div class="cm-menu-top">
  <div class="cm-menu-top-links">
-   <a href="<?= base_url() ?>home">Home</a>
-   <a href="<?= base_url() ?>">Band</a>
-   <a href="<?= base_url() ?>">Music</a>
-   <a href="<?= base_url() ?>">Events</a>
-   <a href="<?= base_url() ?>">Gallery</a>
-   <a href="<?= base_url() ?>">Contact</a>
+   <a class="<?= (uri_string() == 'home' || uri_string() == '')?'active':''?>" href="<?= base_url() ?>home">Home</a>
+   <a class="<?= (uri_string() == 'band')?'active':''?>" href="<?= base_url() ?>band">Band</a>
+   <a class="<?= (uri_string() == 'music')?'active':''?>" href="<?= base_url() ?>music">Music</a>
+   <a class="<?= (uri_string() == 'events')?'active':''?>"  href="<?= base_url() ?>events">Events</a>
+   <a class="<?= (uri_string() == 'gallery')?'active':''?>"  href="<?= base_url() ?>gallery">Gallery</a>
+   <a class="<?= (uri_string() == 'contact')?'active':''?>"  href="<?= base_url() ?>contact">Contact</a>
  </div>
 </div>
 
 <div class="container-full">
-
- {content}
+  {content}
 </div>
 
 <div class="cm-footer">
