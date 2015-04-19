@@ -16,12 +16,11 @@ class Contact extends MY_Controller {
        $this->email->message($this->input->post('message',''));
        $this->email->send();
        $result = true;
-     } 
+     }
 
      $data = array(
         'title'   => 'Contact',
-        'content' =>  $this->load->view('contact', '', true),
-        'result'  =>  $result,
+        'content' =>  $this->load->view('contact', array('result'  =>  $result), true),
      );
 
      $this->parser->parse('../../assets/index', $data);
