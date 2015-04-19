@@ -31,7 +31,7 @@
 <body class="cm-main">
 
 <div class="cm-menu-top">
- <div class="cm-menu-top-links">
+ <div class="container-full cm-menu-top-links">
    <a class="<?= (uri_string() == 'home' || uri_string() == '')?'active':''?>" href="<?= base_url() ?>home">Home</a>
    <a class="<?= (uri_string() == 'band')?'active':''?>" href="<?= base_url() ?>band">Band</a>
    <a class="<?= (uri_string() == 'music')?'active':''?>" href="<?= base_url() ?>music">Music</a>
