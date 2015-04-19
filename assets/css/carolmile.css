@@ -206,3 +206,61 @@
 }
 
 
+.cm-say {
+    height: 206px;
+    background-image: url("../img/say.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 20px;
+}
+
+.cm-contact-form h5 {
+   font-family: arial, helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   color: #4a4a4a;
+}
+
+.cm-contact-form input, .cm-contact-form textarea {
+  background-color: transparent;
+  background-image: url("../img/bg-contact-input.png");
+  border: solid #4a4a4a 1px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.cm-contact-form textarea {
+    height: 235px;
+    min-height: 235px;
+    max-height: 235px;
+    padding: 5px;
+}
+
+.cm-submit {
+   width: 80px;
+   height: 35px;
+   background-color: #4a4a4a;
+   border: none;
+   color: #ffffff;
+   font-family: arial, helvetica, sans-serif;
+   font-size: 14px;
+}
+
+.cm-submit:hover {
+   background-color: #8C8989;
+}
+
+.cm-contact-contact {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.cm-error {
+  color: red;
+  font-size: 12px;
+  line-height: 14px;
+}
