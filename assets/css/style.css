@@ -444,16 +444,16 @@ dl:after {
     width: 720px;
   }
 }
-@media only screen and (min-width: 979px) {
+@media only screen and (min-width: 864px) {
   .container,
   .container-full {
-    width: 980px;
+    width: 865px;
   }
 }
-@media only screen and (min-width: 1139px) {
+@media only screen and (min-width: 864px) {
   .container,
   .container-full {
-    width: 1140px;
+    width: 865px;
   }
 }
 .col-1,
@@ -723,7 +723,7 @@ dl:after {
     padding: 0;
   }
 }
-@media only screen and (min-width: 979px) {
+@media only screen and (min-width: 864px) {
   .col-desktop-1,
   .col-desktop-2,
   .col-desktop-3,
@@ -859,7 +859,7 @@ dl:after {
     padding: 0;
   }
 }
-@media only screen and (min-width: 1139px) {
+@media only screen and (min-width: 864px) {
   .col-hd-1,
   .col-hd-2,
   .col-hd-3,

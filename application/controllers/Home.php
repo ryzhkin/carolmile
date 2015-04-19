@@ -6,7 +6,8 @@ class Home extends MY_Controller {
      // $this->load->view('../../assets/test');
      //$this->load->view('test');
      $data = array(
-      'content' => base_url()
+      'title'   => 'Home',
+      'content' =>  base_url()
      );
      $this->parser->parse('../../assets/index', $data);
   }  
