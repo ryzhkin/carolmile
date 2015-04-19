@@ -32,21 +32,27 @@
 
 <div class="cm-menu-top">
  <div class="cm-menu-top-links">
-   <a href="#">Home</a>
-   <a href="#">Band</a>
-   <a href="#">Music</a>
-   <a href="#">Events</a>
-   <a href="#">Gallery</a>
-   <a href="#">Contact</a>
+   <a href="<?= base_url() ?>home">Home</a>
+   <a href="<?= base_url() ?>">Band</a>
+   <a href="<?= base_url() ?>">Music</a>
+   <a href="<?= base_url() ?>">Events</a>
+   <a href="<?= base_url() ?>">Gallery</a>
+   <a href="<?= base_url() ?>">Contact</a>
  </div>
 </div>
 
 <div class="container-full">
+
  {content}
 </div>
 
 <div class="cm-footer">
-  Footer
+  <div class="cm-footer-list">
+    <span class="copyright"> copyright © 2014 by carol mile </span>
+    <a class="twitter" href="http://twitter.com/"></a>
+    <a class="vk" href="#"></a>
+    <a class="facebook" href="http://www.facebook.com/groups/213568802153821/"></a>
+  </div>
 </div>
 
 
