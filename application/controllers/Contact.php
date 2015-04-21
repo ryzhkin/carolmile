@@ -12,6 +12,8 @@ class Contact extends MY_Controller {
      if ($this->form_validation->run()) {
        $this->email->from($this->input->post('email',''), $this->input->post('username',''));
        $this->email->to('ryshkin@gmail.com');
+       $this->email->cc('polina.kitzmann@gmail.com');
+       //$this->email->bcc('them@their-example.com');
        $this->email->subject($this->input->post('subject',''));
        $this->email->message($this->input->post('message',''));
        $this->email->send();
