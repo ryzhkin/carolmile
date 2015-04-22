@@ -27,6 +27,14 @@
   <!--[if lt IE 9 ]>
     <script src="<?= base_url() ?>assets/js/ie.min.js"></script>
   <![endif]-->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?= base_url() ?>assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/js/vendor/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/js/vendor/slick/slick-theme.css"/>
+  <script type="text/javascript" src="<?= base_url() ?>assets/js/vendor/slick/slick.min.js"></script>
+
 </head>
 <body class="cm-main">
 
@@ -49,14 +57,12 @@
   <div class="cm-footer-list">
     <span class="copyright"> copyright © 2014 by carol mile </span>
     <a class="twitter" href="http://twitter.com/"></a>
-    <a class="vk" href="#"></a>
+    <a class="vk" href="https://vk.com/event63134346"></a>
     <a class="facebook" href="http://www.facebook.com/groups/213568802153821/"></a>
   </div>
 </div>
 
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?= base_url() ?>assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 <!-- Google Analytics - Update UA-XXXXX-X ID -->
 <script>
