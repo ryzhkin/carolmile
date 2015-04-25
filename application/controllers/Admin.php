@@ -19,7 +19,7 @@ class Admin extends MY_Controller {
      if (count($menu) > 0) {
        $result = '<ul class="nav navbar-nav">';
        foreach ($menu as $m) {
-         $result .= '<li class="'.((isset($m['active']))?'active':'').'"><a href="'.$m['href'].'">'.$m['title'].'</a></li>';
+         $result .= '<li class="'.((isset($m['active']))?'active':'').'"><a href="'.base_url().$m['href'].'">'.$m['title'].'</a></li>';
        }
        $result .= '</ul>';
      }
@@ -41,15 +41,15 @@ class Admin extends MY_Controller {
 
   public function index() {
      if (!$this->ion_auth->is_admin()) {
-        redirect('admin/login', 'auto');
+        redirect(base_url().'admin/login', 'auto');
      } else {
-        redirect('admin/gallery', 'auto');
+        redirect(base_url().'admin/gallery', 'auto');
      }
   }
 
   public function gallery() {
         if (!$this->ion_auth->is_admin()) {
-            redirect('admin/login', 'auto');
+            redirect(base_url().'admin/login', 'auto');
         }
         $this->grocery_crud->set_table('gallery');
         $this->grocery_crud->required_fields('title','photo');
@@ -75,12 +75,12 @@ class Admin extends MY_Controller {
               //if the login is successful
               //redirect them back to the home page
               $this->session->set_flashdata('message', $this->ion_auth->messages());
-              redirect('admin', 'auto');
+              redirect(base_url().'admin', 'auto');
           } else {
               //if the login was un-successful
               //redirect them back to the login page
               $this->session->set_flashdata('message', $this->ion_auth->errors());
-              redirect('admin/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
+              redirect(base_url().'admin/login', 'refresh'); //use redirects instead of loading views for compatibility with MY_Controller libraries
           }
       } else {
         $data = array(

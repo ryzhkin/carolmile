@@ -281,12 +281,50 @@
 
 .cm-gallery-photo {
   height: 465px;
-  border: solid #4a4a4a 1px;
+ /* border: solid #4a4a4a 1px;*/
   margin-bottom: 20px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .cm-gallery {
-  height : 138px;
+  height : 100px;
   width  : 84%;
   margin: 0 auto;
+}
+
+.cm-gallery .photo-contaner {
+  margin-right: 10px;
+  width  : 180px;
+}
+
+.cm-gallery .photo-title {
+    text-align: center;
+    color: #4a4a4a;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.cm-gallery .photo {
+    /*background-image: url("../img/say.png");*/
+  /*  border: solid #4a4a4a 1px;
+    background-color: #C1C1BA;*/
+    background-color: #ffffff;
+   /* opacity: 0.8;*/
+    height : 100px;
+
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    cursor: pointer;
+}
+
+
+.current-photo .photo {
+   border: solid darkgreen 1px;
+   /*opacity: 1;*/
 }
