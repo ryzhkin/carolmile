@@ -19,7 +19,7 @@ class Admin extends MY_Controller {
      if (count($menu) > 0) {
        $result = '<ul class="nav navbar-nav">';
        foreach ($menu as $m) {
-         $result .= '<li class="'.((isset($m['active']))?'active':'').'"><a href="'.base_url().$m['href'].'">'.$m['title'].'</a></li>';
+         $result .= '<li class="'.((isset($m['active']) && $m['active'] == true)?'active':'').'"><a href="'.base_url().$m['href'].'">'.$m['title'].'</a></li>';
        }
        $result .= '</ul>';
      }
@@ -43,8 +43,37 @@ class Admin extends MY_Controller {
      if (!$this->ion_auth->is_admin()) {
         redirect(base_url().'admin/login', 'auto');
      } else {
-        redirect(base_url().'admin/gallery', 'auto');
+        redirect(base_url().'admin/events', 'auto');
      }
+  }
+
+  private function getActiveMenu($activeItem) {
+      $menu = array(
+          ['title' => 'Events',  'href' => 'admin/events', 'active' => false],
+          ['title' => 'Gallery', 'href' => 'admin/gallery', 'active' => false],
+          ['title' => 'Logout',  'href' => 'admin/logout']
+      );
+     foreach ($menu as &$m) {
+        if (strtolower(trim($m['title'])) == strtolower(trim($activeItem))) {
+          $m['active'] = true;
+        }
+     }
+     return $menu;
+  }
+
+  public function events() {
+        if (!$this->ion_auth->is_admin()) {
+            redirect(base_url().'admin/login', 'auto');
+        }
+        $this->grocery_crud->set_table('events');
+        $this->grocery_crud->required_fields('event_date', 'title', 'poster');
+        $this->grocery_crud->set_field_upload('poster','assets/uploads/events');
+        $data = array(
+            'title'   => 'Admin tools',
+            'menu'    => $this->renderMenu($this->getActiveMenu('Events')),
+            'content' => $this->renderTable($this->grocery_crud->render()),
+        );
+        $this->parser->parse('../../assets/admin/index', $data);
   }
 
   public function gallery() {
@@ -56,10 +85,7 @@ class Admin extends MY_Controller {
         $this->grocery_crud->set_field_upload('photo','assets/uploads/gallery');
         $data = array(
             'title'   => 'Admin tools',
-            'menu'    => $this->renderMenu(array(
-                    ['title' => 'Gallery', 'href' => '#', 'active' => true],
-                    ['title' => 'Logout',  'href' => 'admin/logout']
-                )),
+            'menu'    => $this->renderMenu($this->getActiveMenu('Gallery')),
             'content' => $this->renderTable($this->grocery_crud->render()),
         );
         $this->parser->parse('../../assets/admin/index', $data);

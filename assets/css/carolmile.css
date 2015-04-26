@@ -309,17 +309,11 @@
 }
 
 .cm-gallery .photo {
-    /*background-image: url("../img/say.png");*/
-  /*  border: solid #4a4a4a 1px;
-    background-color: #C1C1BA;*/
     background-color: #ffffff;
-   /* opacity: 0.8;*/
     height : 100px;
-
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-
     cursor: pointer;
 }
 
@@ -327,4 +321,42 @@
 .current-photo .photo {
    border: solid darkgreen 1px;
    /*opacity: 1;*/
+}
+
+.cm-events {
+    height : 490px;
+    width  : 84%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.cm-events .poster-contaner {
+    margin-right: 10px;
+    width  : 325px;
+}
+
+.cm-events .poster {
+    background-color: #ffffff;
+    height : 325px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.cm-events .poster-title {
+    text-align: center;
+    color: #4a4a4a;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.poster-center {
+  /*border: solid red 2px;*/
+  width: 200px;
+}
+
+.slick-center {
+  transform: scale(1.5);
 }
