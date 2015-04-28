@@ -8,10 +8,13 @@ class Events extends MY_Controller {
       $events = $query->result();
       array_unshift($events, $events[count($events) - 1]);
       array_pop($events);
+
+      $query = $this->db->query('SELECT * FROM albom');
+      $alboms = $query->result();
       //Common::xlog('events', $events);
       $data = array(
-          'title'   => 'Events',
-          'content' =>  $this->load->view('events', array('events' => $events), true)
+         'title'   => 'Events',
+         'content' =>  $this->load->view('events', array('events' => $events, 'alboms' => $alboms), true)
       );
       $this->parser->parse('../../assets/index', $data);
   }  

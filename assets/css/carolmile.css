@@ -363,3 +363,11 @@
   background-size: contain;
   pointer-events:none; /* It's cool option for event tranzition throw html elements */
 }
+
+.cm-alboms {
+  height: 137px;
+}
+
+.cm-alboms .photo {
+  height: 137px;
+}

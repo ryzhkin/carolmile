@@ -19,6 +19,23 @@
         </div>
     </div>
    <div class="activePoster"></div>
+
+   <div style="margin-top: 50px;">
+        <div class="cm-gallery cm-alboms">
+            <?php
+            foreach ($alboms as $albom) {
+                ?>
+                <div class="photo-contaner">
+                    <div class="photo" photo="<?= $albom->cover ?>" title="<?= $albom->title ?>" style="background-image: url('assets/uploads/cover/<?= $albom->cover ?>');"></div>
+                    <div class="photo-title">
+                        <?= $albom->title ?>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
 </div>
 
 
@@ -38,6 +55,13 @@
           if (jQuery('.slick-active').length >= 3) {
             jQuery('.activePoster').css('background-image', jQuery(jQuery('.slick-active')[1]).find('.poster').css('background-image'));
           }
+        });
+
+        jQuery('.cm-alboms').slick({
+            //centerMode: true,
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 1
         });
 
     });

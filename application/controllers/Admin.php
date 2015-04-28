@@ -19,7 +19,18 @@ class Admin extends MY_Controller {
      if (count($menu) > 0) {
        $result = '<ul class="nav navbar-nav">';
        foreach ($menu as $m) {
-         $result .= '<li class="'.((isset($m['active']) && $m['active'] == true)?'active':'').'"><a href="'.base_url().$m['href'].'">'.$m['title'].'</a></li>';
+         if (isset($m['submenu']) && count($m['submenu']) > 0) {
+           $result .= '<li class="dropdown '.((isset($m['active']) && $m['active'] == true)?'active':'').'"><a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">'.$m['title'].'<span class="caret"></span></a>';
+           $result .= ' <ul class="dropdown-menu" role="menu">';
+           foreach ($m['submenu'] as $sm) {
+             $result .= ' <li><a href="'.base_url().$sm['href'].'">'.$sm['title'].'</a></li>';
+           }
+           $result .= ' </ul>';
+           $result .= '</li>';
+         } else {
+           $result .= '<li class="'.((isset($m['active']) && $m['active'] == true)?'active':'').'"><a href="'.base_url().$m['href'].'">'.$m['title'].'</a></li>';
+         }
+
        }
        $result .= '</ul>';
      }
@@ -49,6 +60,10 @@ class Admin extends MY_Controller {
 
   private function getActiveMenu($activeItem) {
       $menu = array(
+          ['title' => 'Music',  'href' => '#', 'active' => false, 'submenu' => array(
+             ['title' => 'Alboms',      'href' => 'admin/alboms'],
+             ['title' => 'MP3 Tracks',  'href' => 'admin/tracks']
+          )],
           ['title' => 'Events',  'href' => 'admin/events', 'active' => false],
           ['title' => 'Gallery', 'href' => 'admin/gallery', 'active' => false],
           ['title' => 'Logout',  'href' => 'admin/logout']
@@ -61,6 +76,46 @@ class Admin extends MY_Controller {
      return $menu;
   }
 
+
+  public function tracks() {
+        if (!$this->ion_auth->is_admin()) {
+            redirect(base_url().'admin/login', 'auto');
+        }
+        $this->grocery_crud->set_table('track');
+        $this->grocery_crud->required_fields('title', 'mp3');
+        $this->grocery_crud->set_field_upload('mp3','assets/uploads/mp3');
+        $this->grocery_crud->unset_export();
+        $this->grocery_crud->unset_print();
+        $this->grocery_crud->unset_read();
+        $data = array(
+            'title'   => 'Admin tools',
+            'menu'    => $this->renderMenu($this->getActiveMenu('Music')),
+            'content' => $this->renderTable($this->grocery_crud->render()),
+        );
+        $this->parser->parse('../../assets/admin/index', $data);
+  }
+
+  public function alboms() {
+        if (!$this->ion_auth->is_admin()) {
+           redirect(base_url().'admin/login', 'auto');
+        }
+        $this->grocery_crud->set_table('albom');
+        $this->grocery_crud->required_fields('title', 'cover');
+        $this->grocery_crud->set_field_upload('cover','assets/uploads/cover');
+        $this->grocery_crud->set_relation_n_n('albom', 'albom_track', 'track', 'albom_id', 'track_id', 'title', 'priority');
+
+
+        $this->grocery_crud->unset_export();
+        $this->grocery_crud->unset_print();
+        $this->grocery_crud->unset_read();
+        $data = array(
+            'title'   => 'Admin tools',
+            'menu'    => $this->renderMenu($this->getActiveMenu('Music')),
+            'content' => $this->renderTable($this->grocery_crud->render()),
+        );
+        $this->parser->parse('../../assets/admin/index', $data);
+  }
+
   public function events() {
         if (!$this->ion_auth->is_admin()) {
             redirect(base_url().'admin/login', 'auto');
@@ -68,6 +123,9 @@ class Admin extends MY_Controller {
         $this->grocery_crud->set_table('events');
         $this->grocery_crud->required_fields('event_date', 'title', 'poster');
         $this->grocery_crud->set_field_upload('poster','assets/uploads/events');
+        $this->grocery_crud->unset_export();
+        $this->grocery_crud->unset_print();
+        $this->grocery_crud->unset_read();
         $data = array(
             'title'   => 'Admin tools',
             'menu'    => $this->renderMenu($this->getActiveMenu('Events')),
@@ -83,6 +141,9 @@ class Admin extends MY_Controller {
         $this->grocery_crud->set_table('gallery');
         $this->grocery_crud->required_fields('title','photo');
         $this->grocery_crud->set_field_upload('photo','assets/uploads/gallery');
+        $this->grocery_crud->unset_export();
+        $this->grocery_crud->unset_print();
+        $this->grocery_crud->unset_read();
         $data = array(
             'title'   => 'Admin tools',
             'menu'    => $this->renderMenu($this->getActiveMenu('Gallery')),
