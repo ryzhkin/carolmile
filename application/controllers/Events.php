@@ -6,9 +6,10 @@ class Events extends MY_Controller {
       $this->load->database();
       $query = $this->db->query('SELECT * FROM events order by event_date desc');
       $events = $query->result();
-      array_unshift($events, $events[count($events) - 1]);
-      array_pop($events);
-
+      if (count($events) > 0) {
+        array_unshift($events, $events[count($events) - 1]);
+        array_pop($events);
+      }
       $query = $this->db->query('SELECT * FROM albom');
       $alboms = $query->result();
       //Common::xlog('events', $events);
