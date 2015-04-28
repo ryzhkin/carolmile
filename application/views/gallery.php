@@ -31,13 +31,13 @@
       jQuery('.slick-slide.slick-active[data-slick-index="1"]').addClass('current-photo');
       jQuery('.cm-gallery-photo').css('background-image', 'url("assets/uploads/gallery/' + jQuery('.slick-slide.slick-active[data-slick-index="1"] .photo').attr('photo') + '")');
       jQuery('.cm-gallery-photo-caption').html(jQuery('.slick-slide.slick-active[data-slick-index="1"] .photo').attr('title'));
-      jQuery('.cm-gallery').on('afterChange', function(event, slick, currentSlide) {
+      /*jQuery('.cm-gallery').on('afterChange', function(event, slick, currentSlide) {
           jQuery('.slick-slide').removeClass('current-photo');
           var currentPhoto = jQuery('.slick-slide.slick-active[data-slick-index="' + currentSlide + '"]');
           jQuery(currentPhoto).addClass('current-photo');
           jQuery('.cm-gallery-photo').css('background-image', 'url("assets/uploads/gallery/' + jQuery(currentPhoto).find('.photo').attr('photo') + '")');
           jQuery('.cm-gallery-photo-caption').html(jQuery(currentPhoto).find('.photo').attr('title'));
-      });
+      });*/
       jQuery('.cm-gallery .photo').on('click', function () {
          jQuery('.slick-slide').removeClass('current-photo');
          jQuery(this).parent().addClass('current-photo');

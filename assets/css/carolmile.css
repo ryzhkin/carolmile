@@ -324,10 +324,9 @@
 }
 
 .cm-events {
-    height : 490px;
+    height : 327px;
     width  : 84%;
     margin: 0 auto;
-    padding-top: 40px;
 }
 
 .cm-events .poster-contaner {
@@ -352,11 +351,15 @@
     text-transform: uppercase;
 }
 
-.poster-center {
-  /*border: solid red 2px;*/
-  width: 200px;
-}
-
-.slick-center {
-  transform: scale(1.5);
+.activePoster {
+  /*border: solid white 1px;*/
+  width  : 350px;
+  height : 490px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -570px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events:none; /* It's cool option for event tranzition throw html elements */
 }
