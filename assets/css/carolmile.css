@@ -12,9 +12,6 @@
   padding: 0px;
 }
 
-
-
-
 .cm-main {
   background-image: url("../img/bg.jpg");
   background-repeat: repeat-yt;
@@ -54,7 +51,6 @@
   font-size: 14px;
   font-family: arial, helvetica, sans-serif;
 }
-
 
 .cm-menu-top-links a.active {
   color: #b4a20b;
@@ -370,4 +366,10 @@
 
 .cm-alboms .photo {
   height: 137px;
+}
+
+.albom-content {
+   border: solid #ffffff 1px;
+   height: 460px;
+
 }

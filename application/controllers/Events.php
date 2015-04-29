@@ -15,7 +15,10 @@ class Events extends MY_Controller {
       //Common::xlog('events', $events);
       $data = array(
          'title'   => 'Events',
-         'content' =>  $this->load->view('events', array('events' => $events, 'alboms' => $alboms), true)
+         'content' =>  $this->load->view('events', array(
+                 'events' => $events,
+                 'alboms' => $alboms,
+             ), true)
       );
       $this->parser->parse('../../assets/index', $data);
   }  
