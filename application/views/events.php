@@ -67,7 +67,7 @@
         jQuery('.photo').on('click', function () {
            //console.log(jQuery(this).attr('albomID'));
            jQuery.cookie('albomID', jQuery(this).attr('albomID'), {path: '/'});
-           document.location = '<?= base_url() ?>/music'
+           document.location = '<?= base_url() ?>music'
         });
 
     });

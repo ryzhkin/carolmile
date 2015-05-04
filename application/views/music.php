@@ -114,7 +114,7 @@
         jQuery('.slick-active:first').addClass('current-photo');
         jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery('.slick-active:first .photo').attr('photo') + '")');
 
-       
+
         jQuery(window).on('resize', function () {
           jQuery('.cm-music-player-progress').outerWidth(jQuery('.cm-music-player-progress').parent().outerWidth() - 140);
         });
