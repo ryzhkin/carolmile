@@ -28,7 +28,7 @@ class Music extends MY_Controller {
                $songTime = floor($duration/60).':'.str_pad(($duration - floor($duration/60)*60), 2, '0', STR_PAD_LEFT);
                //Common::xlog('mp3', $track->title.' > '.$songTime);
                $html .= '
-                <tr class="'.(($counter == 1)?'active':'').'">
+                <tr class="'.(($counter == 1)?'active':'').'" mp3="'.base_url().'assets/uploads/mp3/'.$track->mp3.'">
                   <td>'.$counter.'. '.$track->title.'</td>
                   <td style="max-width: 45px; width: 45px;">'.$songTime.'</td>
                 </tr>

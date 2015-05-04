@@ -26,7 +26,7 @@
             foreach ($alboms as $albom) {
                 ?>
                 <div class="photo-contaner">
-                    <div class="photo" photo="<?= $albom->cover ?>" title="<?= $albom->title ?>" style="background-image: url('assets/uploads/cover/<?= $albom->cover ?>');"></div>
+                    <div albomID="<?= $albom->albom_id ?>" class="photo" photo="<?= $albom->cover ?>" title="<?= $albom->title ?>" style="background-image: url('assets/uploads/cover/<?= $albom->cover ?>');"></div>
                     <div class="photo-title">
                         <?= $albom->title ?>
                     </div>
@@ -62,6 +62,12 @@
             infinite: true,
             slidesToShow: 5,
             slidesToScroll: 1
+        });
+
+        jQuery('.photo').on('click', function () {
+           //console.log(jQuery(this).attr('albomID'));
+           jQuery.cookie('albomID', jQuery(this).attr('albomID'), {path: '/'});
+           document.location = '<?= base_url() ?>/music'
         });
 
     });

@@ -30,7 +30,7 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?= base_url() ?>assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
+  <script type="text/javascript" src="<?= base_url() ?>assets/js/vendor/jquery.cookie.js"></script>
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/js/vendor/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/js/vendor/slick/slick-theme.css"/>
   <script type="text/javascript" src="<?= base_url() ?>assets/js/vendor/slick/slick.min.js"></script>
