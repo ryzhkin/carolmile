@@ -315,7 +315,7 @@
 
 
 .current-photo .photo {
-   border: solid darkgreen 1px;
+   border: solid #ffffff 1px;
    /*opacity: 1;*/
 }
 
@@ -369,7 +369,100 @@
 }
 
 .albom-content {
-   border: solid #ffffff 1px;
+   /*border: solid #ffffff 1px;*/
    height: 460px;
+}
 
+.cm-music-player {
+  background-image: url("../img/player-bg.png");
+  height: 30px;
+  margin-top: 7px;
+}
+
+.cm-music-player-prev, .cm-music-player-next {
+    background-image: url("../img/prev.png");
+    height: 30px;
+    width: 19px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    margin-left: 12px;
+    float: left;
+}
+
+.cm-music-player-next {
+    background-image: url("../img/next.png");
+    margin-left: 30px;
+}
+
+.cm-music-player-progress, .cm-music-player-progress2 {
+  float: left;
+  height: 30px;
+  /*border: solid #ffffff 1px;*/
+  width: 680px;
+  margin-left: 10px;
+  background-image: url("../img/sound-progress.png");
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+.cm-music-player-progress2 {
+  width: 50%;
+  background-image: url("../img/sound-progress2.png");
+  margin: 0;
+}
+
+.cm-music-player-time {
+    float: left;
+    height: 30px;
+    color: #ffffff;
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: 10px;
+    
+
+}
+
+.photo-contaner data {
+  display: none;
+}
+
+.cm-albom-cover {
+  height: 408px;
+  background-image: url("../img/foto_0.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 7px;
+}
+
+.cm-albom-list {
+    height: 408px;
+    margin-right: 7px;
+    overflow-y: auto;
+}
+
+.cm-albom-list table {
+  margin: 0;
+  padding: 0;
+}
+.cm-albom-list tr {
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cm-albom-list .active td{
+  color: #ffffff !important;
+}
+.cm-albom-list td {
+  border: none;
+  padding: 0;
+  padding-bottom: 7px;
 }
