@@ -1,5 +1,26 @@
 <div class="cm-band-content">
   <span class="cm-head-gallery">Music</span>
+  <div class="cm-gallery-photo-caption">Photo Caption</div>
+  <div class="cm-gallery-photo"></div>
+  <div style="margin-bottom: 100px;">
+        <div class="cm-gallery">
+            <?php
+            foreach ($videos as $video) {
+                ?>
+                <div class="photo-contaner">
+                    <div class="photo" youtube="<?= $video->youtube ?>" photo="<?= $video->cover ?>" title="<?= $video->title ?>" style="background-image: url('assets/uploads/video/<?= $video->cover ?>');"></div>
+                    <div class="photo-title">
+                        <?= $video->title ?>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+  </div>
+
+
+
 
     <div id="jquery_jplayer"></div>
     <div class="albom-content">
@@ -101,7 +122,7 @@
             slidesToShow: 5,
             slidesToScroll: 1
         });
-        jQuery('.cm-gallery .photo').on('click', function () {
+        jQuery('.cm-alboms .photo').on('click', function () {
             jQuery('.slick-slide').removeClass('current-photo');
             jQuery(this).parent().addClass('current-photo');
             jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery(this).attr('photo') + '")');
@@ -111,8 +132,8 @@
             });
         });
 
-        jQuery('.slick-active:first').addClass('current-photo');
-        jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery('.slick-active:first .photo').attr('photo') + '")');
+        jQuery('.cm-alboms .slick-active:first').addClass('current-photo');
+        jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery('.cm-alboms .slick-active:first .photo').attr('photo') + '")');
 
 
         jQuery(window).on('resize', function () {
@@ -130,7 +151,7 @@
                         playSong();
                     });
                 } else {
-                    getAlbum(jQuery('.slick-active:first .photo').attr('albomID'), function () {
+                    getAlbum(jQuery('.cm-alboms .slick-active:first .photo').attr('albomID'), function () {
                         playSong();
                     });
                 }
@@ -205,6 +226,29 @@
             //console.log(percent);
 
         });
+
+
+        jQuery('.cm-gallery').slick({
+            //centerMode: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1
+        });
+        jQuery('.cm-gallery .photo').on('click', function () {
+            jQuery('.slick-slide').removeClass('current-photo');
+            jQuery(this).parent().addClass('current-photo');
+            jQuery('.cm-gallery-photo-caption').html(jQuery(this).attr('title'));
+            var youtube = jQuery(this).attr('youtube');
+            youtube = youtube.replace('watch?v=', 'embed/');
+            jQuery('.cm-gallery-photo').html('<iframe width="825" height="465" src="' + youtube + '?rel=0&controls=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+            jQuery('#jquery_jplayer').jPlayer("stop");
+        });
+        jQuery('.cm-gallery .slick-active:first').addClass('current-photo');
+        jQuery('.cm-gallery-photo-caption').html(jQuery('.cm-gallery .slick-active .photo:first').attr('title'));
+        var youtube = jQuery('.cm-gallery .slick-active .photo:first').attr('youtube');
+        youtube = youtube.replace('watch?v=', 'embed/');
+        jQuery('.cm-gallery-photo').html('<iframe width="825" height="465" src="' + youtube + '?rel=0&controls=0&showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>');
+
 
 
     });

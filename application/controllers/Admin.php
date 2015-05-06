@@ -59,7 +59,8 @@ class Admin extends MY_Controller {
   }
 
   private function getActiveMenu($activeItem) {
-      $menu = array(
+     $menu = array(
+          ['title' => 'Videos',  'href' => 'admin/videos', 'active' => false],
           ['title' => 'Music',  'href' => '#', 'active' => false, 'submenu' => array(
              ['title' => 'Alboms',      'href' => 'admin/alboms'],
              ['title' => 'MP3 Tracks',  'href' => 'admin/tracks']
@@ -74,6 +75,24 @@ class Admin extends MY_Controller {
         }
      }
      return $menu;
+  }
+
+  public function videos() {
+        if (!$this->ion_auth->is_admin()) {
+            redirect(base_url().'admin/login', 'auto');
+        }
+        $this->grocery_crud->set_table('video');
+        $this->grocery_crud->required_fields('title', 'cover', 'youtube');
+        $this->grocery_crud->set_field_upload('cover','assets/uploads/video');
+        $this->grocery_crud->unset_export();
+        $this->grocery_crud->unset_print();
+        $this->grocery_crud->unset_read();
+        $data = array(
+            'title'   => 'Admin tools',
+            'menu'    => $this->renderMenu($this->getActiveMenu('Videos')),
+            'content' => $this->renderTable($this->grocery_crud->render()),
+        );
+        $this->parser->parse('../../assets/admin/index', $data);
   }
 
 

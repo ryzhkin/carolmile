@@ -45,10 +45,13 @@ class Music extends MY_Controller {
      } else {
          $query = $this->db->query('SELECT * FROM albom');
          $alboms = $query->result();
+         $query = $this->db->query('SELECT * FROM video');
+         $videos = $query->result();
          $data = array(
              'title'   => 'Music',
              'content' =>  $this->load->view('music', array(
                      'alboms' => $alboms,
+                     'videos' => $videos,
                  ), true)
          );
          $this->parser->parse('../../assets/index', $data);

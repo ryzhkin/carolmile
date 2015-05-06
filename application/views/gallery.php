@@ -1,6 +1,8 @@
 <div class="cm-band-content">
     <span class="cm-head-gallery">Gallery</span>
-    <div class="cm-gallery-photo-caption">Photo Caption</div>
+    <div class="cm-gallery-photo-caption">Video title</div>
+
+
     <div class="cm-gallery-photo"></div>
     <div>
       <div class="cm-gallery">
