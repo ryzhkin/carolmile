@@ -51,6 +51,7 @@
       </div>
       <div id="jp_container" class="cm-music-player">
         <div class="cm-music-player-prev"></div>
+        <div class="cm-music-player-action cm-music-player-pause"></div>
         <div class="cm-music-player-next"></div>
         <div class="cm-music-player-progress">
             <div class="cm-music-player-progress2"></div>
@@ -156,6 +157,19 @@
                     });
                 }
 
+                jQuery('.cm-music-player-action').on('click', function () {
+                  if (jQuery(this).hasClass('cm-music-player-pause')) {
+                    jQuery(this).removeClass('cm-music-player-pause');
+                    jQuery(this).addClass('cm-music-player-play');
+                    jQuery('#jquery_jplayer').jPlayer("pause");
+                  } else
+                  if (jQuery(this).hasClass('cm-music-player-play')) {
+                    jQuery(this).removeClass('cm-music-player-play');
+                    jQuery(this).addClass('cm-music-player-pause');
+                    jQuery('#jquery_jplayer').jPlayer("play");
+                  }
+                });
+
             },
             timeupdate: function(event) {
                 //my_extraPlayInfo.text(parseInt(event.jPlayer.status.currentPercentAbsolute, 10) + "%");
@@ -252,4 +266,7 @@
 
 
     });
+
+
+
 </script>

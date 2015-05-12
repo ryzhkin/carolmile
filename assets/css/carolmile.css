@@ -379,7 +379,7 @@
   margin-top: 7px;
 }
 
-.cm-music-player-prev, .cm-music-player-next {
+.cm-music-player-prev, .cm-music-player-next, .cm-music-player-pause, .cm-music-player-play {
     background-image: url("../img/prev.png");
     height: 30px;
     width: 19px;
@@ -391,9 +391,21 @@
     float: left;
 }
 
+.cm-music-player-pause, .cm-music-player-play {
+    height: 30px;
+    width: 13px;
+    background-image: url("../img/pause.png");
+    margin-left: 10px;
+    background-size: auto;
+}
+
+.cm-music-player-play {
+    background-image: url("../img/play.png");
+}
+
 .cm-music-player-next {
     background-image: url("../img/next.png");
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .cm-music-player-progress, .cm-music-player-progress2 {
