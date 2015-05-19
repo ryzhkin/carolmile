@@ -17,7 +17,7 @@
   background-image: url("../img/bg.jpg");
   background-repeat: repeat-yt;
   background-size: 100%;
-
+  background-attachment: fixed;
 }
 
 .cm-line, .cm-menu-top, .cm-footer {
