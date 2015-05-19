@@ -68,6 +68,11 @@
         jQuery('.cm-footer').css({
           top:  (jQuery(window).outerHeight() - jQuery('.cm-footer').outerHeight() - 20) + 'px'
         });
+        jQuery(window).on('resize', function () {
+            jQuery('.cm-footer').css({
+                top:  (jQuery(window).outerHeight() - jQuery('.cm-footer').outerHeight() - 20) + 'px'
+            });
+        });
       /* jQuery('.cm-menu-top').css({
           position: 'fixed'
        });*/
