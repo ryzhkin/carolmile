@@ -37,7 +37,7 @@
 }
 
 .cm-footer {
-  position: fixed;
+  position: absolute;
 }
 
 .cm-menu-top-links {
