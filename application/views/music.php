@@ -51,7 +51,7 @@
       </div>
       <div id="jp_container" class="cm-music-player">
         <div class="cm-music-player-prev"></div>
-        <div class="cm-music-player-action cm-music-player-pause"></div>
+        <div class="cm-music-player-action cm-music-player-play"></div>
         <div class="cm-music-player-next"></div>
         <div class="cm-music-player-progress">
             <div class="cm-music-player-progress2"></div>
@@ -96,7 +96,7 @@
           jQuery('.cm-albom-list tr').on('click', function () {
               jQuery('.cm-albom-list tr').removeClass('active');
               jQuery(this).addClass('active');
-              playSong();
+             // playSong();
           });
         }
         var getAlbum = function (albumID, onSuccess) {
@@ -109,6 +109,8 @@
                 if (typeof(res.html) == 'string') {
                   jQuery('.cm-albom-list').html(res.html);
                   addHandlers();
+                  jQuery('#jquery_jplayer').jPlayer("stop");
+                  jQuery('.cm-music-player-progress2').css('width', "0%");
                   if (typeof(onSuccess) == 'function') {
                     onSuccess();
                   }
@@ -129,7 +131,7 @@
             jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery(this).attr('photo') + '")');
             jQuery.cookie('albomID', jQuery(this).attr('albomID'), {path: '/'});
             getAlbum(jQuery(this).attr('albomID'), function () {
-                playSong();
+              //  playSong();
             });
         });
 
@@ -144,16 +146,15 @@
 
         jQuery('#jquery_jplayer').jPlayer({
             ready: function () {
-                //$("#jp_container .track-default").click();
-                //console.log('YES!!!');
+
                 if (jQuery.cookie('albomID') !== undefined) {
                     jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery('.photo[albomID="' + jQuery.cookie('albomID') + '"]:first').attr('photo') + '")');
                     getAlbum(jQuery.cookie('albomID'), function () {
-                        playSong();
+                       // playSong();
                     });
                 } else {
                     getAlbum(jQuery('.cm-alboms .slick-active:first .photo').attr('albomID'), function () {
-                        playSong();
+                       // playSong();
                     });
                 }
 
