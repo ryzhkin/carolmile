@@ -48,11 +48,11 @@
    <a class="<?= (uri_string() == 'contact')?'active':''?>"  href="<?= base_url() ?>contact">Contact</a>
  </div>
 </div>
-
+<div style="height: 100px;"></div>
 <div class="container-full">
   {content}
 </div>
-
+<div style="height: 100px;"></div>
 <div class="cm-footer">
   <div class="cm-footer-list">
     <span class="copyright"> copyright © 2014 by carol mile </span>
@@ -62,6 +62,17 @@
   </div>
 </div>
 
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('.cm-footer').css({
+          top:  (jQuery(window).outerHeight() - jQuery('.cm-footer').outerHeight() - 20) + 'px'
+        });
+      /* jQuery('.cm-menu-top').css({
+          position: 'fixed'
+       });*/
+    });
+</script>
 
 
 <!-- Google Analytics - Update UA-XXXXX-X ID -->

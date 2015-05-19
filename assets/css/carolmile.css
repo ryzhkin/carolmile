@@ -1,5 +1,6 @@
 .container-full {
     /*  border: solid lawngreen 1px;*/
+    /*margin-top: 40px;*/
 }
 
 .col-3, .col-4, .col-6 {
@@ -22,12 +23,21 @@
 .cm-line, .cm-menu-top, .cm-footer {
   background-image: url("../img/bg-menu.png");
   height: 80px;
+  width: 100%;
   color: #ffffff;
+
+  z-index: 1000;
+  display: block;
 }
 
 .cm-menu-top {
-  margin-top: 100px;
+  position: fixed;
+  margin-top: 0px;
   margin-bottom: 40px;
+}
+
+.cm-footer {
+  position: fixed;
 }
 
 .cm-menu-top-links {
