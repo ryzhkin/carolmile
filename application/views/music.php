@@ -89,14 +89,22 @@
                     mp3: jQuery('.cm-albom-list tr.active').attr('mp3')
                 });
                 jQuery('#jquery_jplayer').jPlayer("play");
+
+                jQuery('.cm-music-player-action').removeClass('cm-music-player-play');
+                jQuery('.cm-music-player-action').addClass('cm-music-player-pause');
+
             }
         }
         var addHandlers = function () {
+          jQuery('#jquery_jplayer').jPlayer("stop");
+          jQuery('.cm-music-player-progress2').css('width', "0%");
+          jQuery('.cm-music-player-action').removeClass('cm-music-player-pause');
+          jQuery('.cm-music-player-action').addClass('cm-music-player-play');
           jQuery('.cm-albom-list tr').off('click');
           jQuery('.cm-albom-list tr').on('click', function () {
               jQuery('.cm-albom-list tr').removeClass('active');
               jQuery(this).addClass('active');
-             // playSong();
+              playSong();
           });
         }
         var getAlbum = function (albumID, onSuccess) {
@@ -109,8 +117,7 @@
                 if (typeof(res.html) == 'string') {
                   jQuery('.cm-albom-list').html(res.html);
                   addHandlers();
-                  jQuery('#jquery_jplayer').jPlayer("stop");
-                  jQuery('.cm-music-player-progress2').css('width', "0%");
+
                   if (typeof(onSuccess) == 'function') {
                     onSuccess();
                   }
