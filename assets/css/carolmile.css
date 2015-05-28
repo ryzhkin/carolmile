@@ -488,3 +488,11 @@
   padding: 0;
   padding-bottom: 7px;
 }
+
+.copyright a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.copyright a.active {
+  color: #b4a20b;
+}

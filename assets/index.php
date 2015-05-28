@@ -55,7 +55,7 @@
 <!--<div style="height: 100px;"></div>-->
 <div class="cm-footer">
   <div class="cm-footer-list">
-    <span class="copyright"> copyright © 2014 by carol mile </span>
+    <span class="copyright"> copyright © 2014 by carol mile &nbsp;|&nbsp; <a class="<?= (uri_string() == 'impressum')?'active':''?>" href="<?= base_url() ?>impressum">impressum</a></span>
     <a class="twitter" href="http://twitter.com/"></a>
     <a class="vk" href="https://vk.com/event63134346"></a>
     <a class="facebook" href="http://www.facebook.com/groups/213568802153821/"></a>

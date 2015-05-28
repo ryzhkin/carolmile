@@ -1,5 +1,21 @@
+<!--<script type="text/javascript" src="<?/*= base_url() */?>assets/js/vendor/jquery.waitforimages.min.js"></script>
+<script type="text/javascript" src="<?/*= base_url() */?>assets/js/vendor/jquery.resize.js"></script>
+<link rel="stylesheet" type="text/css" href="<?/*= base_url() */?>assets/js/vendor/carousel-3d/styles/jquery.carousel-3d.default.css"/>
+<script type="text/javascript" src="<?/*= base_url() */?>assets/js/vendor/carousel-3d/jquery.carousel-3d.min.js"></script>-->
+
 <div class="cm-band-content">
    <span class="cm-head-gallery">Events</span>
+
+    <!--<div id="wrapper">
+        <div id="myCarousel" data-carousel-3d>
+            <?php
+/*            foreach ($events as $event) {
+            */?>
+                <img src="<?/*= base_url() */?>assets/uploads/events/<?/*= $event->poster */?>" style="height: 325px;"/>
+            <?php /*} */?>
+        </div>
+    </div>-->
+
    <div style="margin-top: 100px; margin-bottom: 170px;">
         <div class="cm-events">
             <?php
@@ -51,9 +67,36 @@
         if (jQuery('.slick-active').length >= 3) {
             jQuery('.activePoster').css('background-image', jQuery(jQuery('.slick-active')[1]).find('.poster').css('background-image'));
         }
+       // jQuery('.activePoster').hide();
+
+
+
+        jQuery('.cm-events .slick-track').on('mousedown', function () {
+          jQuery('.activePoster').fadeOut();
+
+        });
+
+        jQuery('.cm-events .slick-track').on('mouseup', function () {
+          console.log('mouseup');
+          jQuery('.activePoster').css('background-image', jQuery(jQuery('.slick-active')[1]).find('.poster').css('background-image'));
+          setTimeout(function () {
+            jQuery('.activePoster').fadeIn();
+          }, 500);
+
+        });
+
+
+        jQuery('.cm-events .slick-prev, .cm-events .slick-next').on('click', function () {
+           jQuery('.activePoster').fadeOut();
+        });
+
         jQuery('.cm-events').on('afterChange', function(event, slick, currentSlide) {
+          //console.log('afterChange');
           if (jQuery('.slick-active').length >= 3) {
             jQuery('.activePoster').css('background-image', jQuery(jQuery('.slick-active')[1]).find('.poster').css('background-image'));
+            setTimeout(function () {
+              jQuery('.activePoster').fadeIn();
+            }, 500);
           }
         });
 
