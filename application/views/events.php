@@ -57,6 +57,13 @@
 
 
 <script type="text/javascript">
+    function preload(arrayOfImages) {
+        $(arrayOfImages).each(function(){
+            $('<img/>')[0].src = this;
+            // Alternatively you could use:
+            // (new Image()).src = this;
+        });
+    }
     jQuery(document).ready(function () {
         jQuery('.cm-events').slick({
             infinite: true,
@@ -87,7 +94,7 @@
               jQuery('.activePoster').animate({
                   opacity: 1.0
               });
-          }, 500);
+          }, 400);
 
         });
 
@@ -108,7 +115,7 @@
                 jQuery('.activePoster').animate({
                     opacity: 1.0
                 });
-            }, 500);
+            }, 400);
           }
         });
 
@@ -125,5 +132,12 @@
            document.location = '<?= base_url() ?>music'
         });
 
+        var images = [
+        <?php  foreach ($events as $event) {
+          echo "'".base_url()."assets/uploads/events/". $event->poster."',";
+        } ?>
+        ];
+        preload(images);
+        //console.log(images);
     });
 </script>
