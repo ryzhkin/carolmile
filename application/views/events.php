@@ -94,7 +94,7 @@
               jQuery('.activePoster').animate({
                   opacity: 1.0
               });
-          }, 400);
+          }, 500);
 
         });
 
@@ -115,7 +115,7 @@
                 jQuery('.activePoster').animate({
                     opacity: 1.0
                 });
-            }, 400);
+            }, 500);
           }
         });
 
