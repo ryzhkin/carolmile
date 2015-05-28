@@ -72,7 +72,10 @@
 
 
         jQuery('.cm-events .slick-track').on('mousedown', function () {
-          jQuery('.activePoster').fadeOut();
+          //jQuery('.activePoster').fadeOut();
+          jQuery('.activePoster').animate({
+            opacity: 0.01
+          });
 
         });
 
@@ -80,14 +83,20 @@
           console.log('mouseup');
           jQuery('.activePoster').css('background-image', jQuery(jQuery('.slick-active')[1]).find('.poster').css('background-image'));
           setTimeout(function () {
-            jQuery('.activePoster').fadeIn();
+            //jQuery('.activePoster').fadeIn();
+              jQuery('.activePoster').animate({
+                  opacity: 1.0
+              });
           }, 500);
 
         });
 
 
         jQuery('.cm-events .slick-prev, .cm-events .slick-next').on('click', function () {
-           jQuery('.activePoster').fadeOut();
+           //jQuery('.activePoster').fadeOut();
+            jQuery('.activePoster').animate({
+                opacity: 0.01
+            });
         });
 
         jQuery('.cm-events').on('afterChange', function(event, slick, currentSlide) {
@@ -95,7 +104,10 @@
           if (jQuery('.slick-active').length >= 3) {
             jQuery('.activePoster').css('background-image', jQuery(jQuery('.slick-active')[1]).find('.poster').css('background-image'));
             setTimeout(function () {
-              jQuery('.activePoster').fadeIn();
+              //jQuery('.activePoster').fadeIn();
+                jQuery('.activePoster').animate({
+                    opacity: 1.0
+                });
             }, 500);
           }
         });
