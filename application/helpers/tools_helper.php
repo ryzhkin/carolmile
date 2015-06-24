@@ -14,6 +14,14 @@
           fclose($fd);
           //chmod($filename, 0644);
       }
+      public static function getParamByName($config, $name) {
+          foreach ($config as $c) {
+            if (mb_convert_case(trim($c['name']), MB_CASE_LOWER) == mb_convert_case(trim($name), MB_CASE_LOWER)) {
+              return $c;
+            }
+          }
+          return null;
+      }
   }
 
 class MP3File

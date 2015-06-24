@@ -58,6 +58,8 @@ class Admin extends MY_Controller {
      }
   }
 
+
+
   private function getActiveMenu($activeItem) {
      $menu = array(
           ['title' => 'Videos',  'href' => 'admin/videos', 'active' => false],
@@ -67,6 +69,7 @@ class Admin extends MY_Controller {
           )],
           ['title' => 'Events',  'href' => 'admin/events', 'active' => false],
           ['title' => 'Gallery', 'href' => 'admin/gallery', 'active' => false],
+          ['title' => 'Sait configuration', 'href' => 'admin/config', 'active' => false],
           ['title' => 'Logout',  'href' => 'admin/logout']
       );
      foreach ($menu as &$m) {
@@ -94,7 +97,6 @@ class Admin extends MY_Controller {
         );
         $this->parser->parse('../../assets/admin/index', $data);
   }
-
 
   public function tracks() {
         if (!$this->ion_auth->is_admin()) {
@@ -169,6 +171,18 @@ class Admin extends MY_Controller {
             'content' => $this->renderTable($this->grocery_crud->render()),
         );
         $this->parser->parse('../../assets/admin/index', $data);
+  }
+
+  public function config() {
+      if (!$this->ion_auth->is_admin()) {
+          redirect(base_url().'admin/login', 'auto');
+      }
+      $data = array(
+          'title'   => 'Admin tools',
+          'menu'    => $this->renderMenu($this->getActiveMenu('Sait configuration')),
+          'content' => $this->renderTable($this->grocery_crud->render()),
+      );
+      $this->parser->parse('../../assets/admin/index', $data);
   }
 
 
