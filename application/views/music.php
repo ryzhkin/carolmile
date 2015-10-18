@@ -62,7 +62,7 @@
     <div style="margin-top: 20px;">
         <div class="cm-gallery cm-alboms">
             <?php
-            Common::xlog('music', $alboms);
+         //   Common::xlog('music', $alboms);
             foreach ($alboms as $albom) {
                 ?>
                 <div class="photo-contaner">
