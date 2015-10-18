@@ -142,7 +142,7 @@ class Admin extends MY_Controller {
             redirect(base_url().'admin/login', 'auto');
         }
         $this->grocery_crud->set_table('events');
-        $this->grocery_crud->required_fields('event_date', 'title', 'poster');
+        $this->grocery_crud->required_fields('event_date', 'poster', 'english_message', 'dutch_message', 'russian_message');
         $this->grocery_crud->set_field_upload('poster','assets/uploads/events');
         $this->grocery_crud->unset_export();
         $this->grocery_crud->unset_print();

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Events extends MY_Controller {
   public function index()	{
       $this->load->database();
-      $query = $this->db->query('SELECT * FROM events order by event_date desc');
+      $query = $this->db->query('SELECT * FROM events order by event_date asc');
       $events = $query->result();
       if (count($events) > 0) {
         array_unshift($events, $events[count($events) - 1]);

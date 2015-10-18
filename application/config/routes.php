@@ -51,11 +51,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['home'] = 'Home';
+$route['home/(:any)'] = 'home/index/$1';
+
 $route['band'] = 'Band';
+$route['band/(:any)'] = 'band/index/$1';
+
 $route['music'] = 'Music';
+$route['music/(:any)'] = 'music/index/$1';
+
 $route['events'] = 'Events';
+$route['events/(:any)'] = 'events/index/$1';
+
 $route['gallery'] = 'Gallery';
+$route['gallery/(:any)'] = 'gallery/index/$1';
+
 $route['contact'] = 'Contact';
+$route['contact/(:any)'] = 'contact/index/$1';
+
+$route['service'] = 'Service';
+$route['service/(:any)'] = 'service/index/$1';
+
+$route['links'] = 'Links';
+$route['links/(:any)'] = 'links/index/$1';
 
 
 $route['default_controller'] = 'home';

@@ -1,37 +1,54 @@
-<!--<script type="text/javascript" src="<?/*= base_url() */?>assets/js/vendor/jquery.waitforimages.min.js"></script>
-<script type="text/javascript" src="<?/*= base_url() */?>assets/js/vendor/jquery.resize.js"></script>
-<link rel="stylesheet" type="text/css" href="<?/*= base_url() */?>assets/js/vendor/carousel-3d/styles/jquery.carousel-3d.default.css"/>
-<script type="text/javascript" src="<?/*= base_url() */?>assets/js/vendor/carousel-3d/jquery.carousel-3d.min.js"></script>-->
+<?php
+$lng = ($this->uri->segment(2) !== null)?$this->uri->segment(2):'en';
+
+
+
+$s = [
+    'Events:' => [
+        'en' => 'Events:',
+        'de' => 'Geschehen:',
+        'ru' => 'События:',
+    ],
+];
+
+?>
 
 <div class="cm-band-content">
-   <span class="cm-head-gallery">Events</span>
+   <span class="cm-head-gallery"><?= $s['Events:'][$lng] ?></span>
+   <table>
+       <?php
+       foreach ($events as $event) {
+       ?>
+          <tr>
+              <td style="width: 25%; padding-top: 0; border: none; vertical-align: top;"><img style="width:100%;" src="<?=  base_url().'assets/uploads/events/'.$event->poster ?>"></td>
+              <td style="padding-top: 0; border: none; vertical-align: top;">
+                  <div><?= $event->event_date ?></div>
 
-    <!--<div id="wrapper">
-        <div id="myCarousel" data-carousel-3d>
-            <?php
-/*            foreach ($events as $event) {
-            */?>
-                <img src="<?/*= base_url() */?>assets/uploads/events/<?/*= $event->poster */?>" style="height: 325px;"/>
-            <?php /*} */?>
-        </div>
-    </div>-->
+                  <?= ( ($lng == 'en')?$event->english_message:(($lng == 'de')?$event->dutch_message:(($lng == 'ru')?$event->russian_message:'') ) ) ?>
 
-   <div style="margin-top: 100px; margin-bottom: 170px;">
+              </td>
+          </tr>
+
+       <?php }?>
+   </table>
+
+
+  <!-- <div style="margin-top: 100px; margin-bottom: 170px;">
         <div class="cm-events">
             <?php
-            foreach ($events as $event) {
-                ?>
+/*            foreach ($events as $event) {
+                */?>
                 <div class="poster-contaner">
-                    <div class="poster" poster="<?= $event->poster ?>" title="<?= $event->title ?>" style="background-image: url('assets/uploads/events/<?= $event->poster ?>');">
+                    <div class="poster" poster="<?/*= $event->poster */?>" title="<?/*= $event->title */?>" style="background-image: url('<?/*= base_url() */?>assets/uploads/events/<?/*= $event->poster */?>');">
 
                     </div>
                     <div class="poster-title">
-                        <?= $event->title ?>
+                        <?/*= $event->title */?>
                     </div>
                 </div>
             <?php
-            }
-            ?>
+/*            }
+            */?>
         </div>
     </div>
    <div class="activePoster"></div>
@@ -39,23 +56,23 @@
    <div style="margin-top: 50px;">
         <div class="cm-gallery cm-alboms">
             <?php
-            foreach ($alboms as $albom) {
-                ?>
+/*            foreach ($alboms as $albom) {
+                */?>
                 <div class="photo-contaner">
-                    <div albomID="<?= $albom->albom_id ?>" class="photo" photo="<?= $albom->cover ?>" title="<?= $albom->title ?>" style="background-image: url('assets/uploads/cover/<?= $albom->cover ?>');"></div>
+                    <div albomID="<?/*= $albom->albom_id */?>" class="photo" photo="<?/*= $albom->cover */?>" title="<?/*= $albom->title */?>" style="background-image: url('<?/*= base_url() */?>assets/uploads/cover/<?/*= $albom->cover */?>');"></div>
                     <div class="photo-title">
-                        <?= $albom->title ?>
+                        <?/*= $albom->title */?>
                     </div>
                 </div>
             <?php
-            }
-            ?>
+/*            }
+            */?>
         </div>
-    </div>
+    </div>-->
 </div>
 
 
-
+<!--
 <script type="text/javascript">
     function preload(arrayOfImages) {
         $(arrayOfImages).each(function(){
@@ -129,15 +146,15 @@
         jQuery('.photo').on('click', function () {
            //console.log(jQuery(this).attr('albomID'));
            jQuery.cookie('albomID', jQuery(this).attr('albomID'), {path: '/'});
-           document.location = '<?= base_url() ?>music'
+           document.location = '<?/*= base_url() */?>music'
         });
 
         var images = [
-        <?php  foreach ($events as $event) {
+        <?php /* foreach ($events as $event) {
           echo "'".base_url()."assets/uploads/events/". $event->poster."',";
-        } ?>
+        } */?>
         ];
         preload(images);
         //console.log(images);
     });
-</script>
+</script>-->

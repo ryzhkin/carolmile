@@ -8,7 +8,7 @@
             foreach ($videos as $video) {
                 ?>
                 <div class="photo-contaner">
-                    <div class="photo" youtube="<?= $video->youtube ?>" photo="<?= $video->cover ?>" title="<?= $video->title ?>" style="background-image: url('assets/uploads/video/<?= $video->cover ?>');"></div>
+                    <div class="photo" youtube="<?= $video->youtube ?>" photo="<?= $video->cover ?>" title="<?= $video->title ?>" style="background-image: url('<?= base_url() ?>assets/uploads/video/<?= $video->cover ?>');"></div>
                     <div class="photo-title">
                         <?= $video->title ?>
                     </div>
@@ -62,10 +62,11 @@
     <div style="margin-top: 20px;">
         <div class="cm-gallery cm-alboms">
             <?php
+            Common::xlog('music', $alboms);
             foreach ($alboms as $albom) {
                 ?>
                 <div class="photo-contaner">
-                    <div albomID="<?= $albom->albom_id ?>" class="photo" photo="<?= $albom->cover ?>" title="<?= $albom->title ?>" style="background-image: url('assets/uploads/cover/<?= $albom->cover ?>');"></div>
+                    <div albomID="<?= $albom->albom_id ?>" class="photo" photo="<?= $albom->cover ?>" title="<?= $albom->title ?>" style="background-image: url('<?=  base_url() ?>assets/uploads/cover/<?= $albom->cover ?>');"></div>
                     <div class="photo-title">
                         <?= $albom->title ?>
                     </div>
@@ -135,7 +136,7 @@
         jQuery('.cm-alboms .photo').on('click', function () {
             jQuery('.slick-slide').removeClass('current-photo');
             jQuery(this).parent().addClass('current-photo');
-            jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery(this).attr('photo') + '")');
+            jQuery('.cm-albom-cover').css('background-image', 'url("<?=  base_url() ?>assets/uploads/cover/' + jQuery(this).attr('photo') + '")');
             jQuery.cookie('albomID', jQuery(this).attr('albomID'), {path: '/'});
             getAlbum(jQuery(this).attr('albomID'), function () {
               //  playSong();
@@ -143,8 +144,8 @@
         });
 
         jQuery('.cm-alboms .slick-active:first').addClass('current-photo');
-        jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery('.cm-alboms .slick-active:first .photo').attr('photo') + '")');
-
+        jQuery('.cm-albom-cover').css('background-image', 'url("<?=  base_url() ?>assets/uploads/cover/' + jQuery('.cm-alboms .slick-active:first .photo').attr('photo') + '")');
+        jQuery('.cm-alboms .photo:first').click();
 
         jQuery(window).on('resize', function () {
           jQuery('.cm-music-player-progress').outerWidth(jQuery('.cm-music-player-progress').parent().outerWidth() - 140);
@@ -155,7 +156,7 @@
             ready: function () {
 
                 if (jQuery.cookie('albomID') !== undefined) {
-                    jQuery('.cm-albom-cover').css('background-image', 'url("assets/uploads/cover/' + jQuery('.photo[albomID="' + jQuery.cookie('albomID') + '"]:first').attr('photo') + '")');
+                    jQuery('.cm-albom-cover').css('background-image', 'url("<?=  base_url() ?>assets/uploads/cover/' + jQuery('.photo[albomID="' + jQuery.cookie('albomID') + '"]:first').attr('photo') + '")');
                     getAlbum(jQuery.cookie('albomID'), function () {
                        // playSong();
                     });

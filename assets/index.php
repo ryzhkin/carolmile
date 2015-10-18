@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
 
-  <link rel="stylesheet" href="<?/*= base_url() */?>assets/css/style.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
   <!--<link rel="stylesheet" href="<?/*= base_url() */?>assets/less/style.less">-->
   <!--<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>-->
   <!--<script src="<?/*= base_url() */?>assets/js/vendor/less.min.js"></script>-->
@@ -40,13 +40,61 @@
 
 <div class="cm-menu-top">
  <div class="container-full cm-menu-top-links">
-   <a class="<?= (uri_string() == 'home' || uri_string() == '')?'active':''?>" href="<?= base_url() ?>home">Home</a>
-   <a class="<?= (uri_string() == 'band')?'active':''?>" href="<?= base_url() ?>band">Band</a>
-   <a class="<?= (uri_string() == 'gallery')?'active':''?>"  href="<?= base_url() ?>gallery">Gallery</a>
-   <a class="<?= (uri_string() == 'music')?'active':''?>" href="<?= base_url() ?>music">Music</a>
-   <a class="<?= (uri_string() == 'events')?'active':''?>"  href="<?= base_url() ?>events">Events</a>
-   <a class="<?= (uri_string() == 'contact')?'active':''?>"  href="<?= base_url() ?>contact">Contact</a>
+   <!--<a class="<?/*= (uri_string() == 'home' || uri_string() == '')?'active':''*/?>" href="<?/*= base_url() */?>home">Home</a>
+   <a class="<?/*= (uri_string() == 'band')?'active':''*/?>" href="<?/*= base_url() */?>band">Band</a>
+   <a class="<?/*= (uri_string() == 'gallery')?'active':''*/?>"  href="<?/*= base_url() */?>gallery">Gallery</a>
+   <a class="<?/*= (uri_string() == 'music')?'active':''*/?>" href="<?/*= base_url() */?>music">Music</a>
+   <a class="<?/*= (uri_string() == 'events')?'active':''*/?>"  href="<?/*= base_url() */?>events">Events</a>
+   <a class="<?/*= (uri_string() == 'contact')?'active':''*/?>"  href="<?/*= base_url() */?>contact">Contact</a>-->
+   <?php
+     $menu = array(
+       'en' => array(
+           'home'    => 'Home',
+           'band'    => 'Band',
+           //'gallery' => 'Gallery',
+           'music'   => 'Music',
+          // 'events'  => 'Events',
+           'service'  => 'Service',
+           'contact' => 'Contact',
+           'links' => 'Links',
+       ),
+       'de' => array(
+           'home'    => 'Zuhause',
+           'band'    => 'Bande',
+          // 'gallery' => 'Gallery',
+           'music'   => 'Musik',
+          // 'events'  => 'Geschehen',
+           'service'  => 'Service',
+           'contact' => 'Kontakt',
+           'links' => 'Links',
+       ),
+       'ru' => array(
+           'home'    => 'Главная',
+           'band'    => 'Группа',
+          // 'gallery' => 'Галерея',
+           'music'   => 'Музыка',
+           //'events'  => 'События',
+           'service'  => 'Услуги',
+           'contact'  => 'Контакты',
+           'links'   => 'Ссылки',
+       ),
+     );
+     $lng = ($this->uri->segment(2) !== null)?$this->uri->segment(2):'en';
+     $menu = $menu[$lng];
+     foreach ($menu as $key => $item) {
+   ?>
+     <a class="<?= ($this->uri->segment(1) == $key)?'active':''?>" href="<?= base_url().$key.'/'.$lng ?>"><?= $item ?></a>
+   <?php }?>
+
+
+   <div style="display: inline-block;">
+   <a style="display: inline; padding: 0;" href="<?= base_url().$this->uri->segment(1)?>/en"><img src="<?= base_url() ?>assets/img/en.png"></a>
+   <a style="display: inline; padding: 0;" href="<?= base_url().$this->uri->segment(1)?>/de"><img src="<?= base_url() ?>assets/img/de.png"></a>
+   <a style="display: inline; padding: 0;" href="<?= base_url().$this->uri->segment(1)?>/ru"><img src="<?= base_url() ?>assets/img/ru.png"></a>
+   </div>
+
  </div>
+
 </div>
 <div style="height: 100px;"></div>
 <div class="container-full">
