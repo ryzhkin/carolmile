@@ -79,18 +79,27 @@
            'links'   => 'Ссылки',
        ),
      );
-     $lng = ($this->uri->segment(2) !== null)?$this->uri->segment(2):'en';
+
+     if (count($this->uri->segment_array()) == 0) {
+       $page = 'home';
+       $lng  = 'en';
+     } else {
+       $page = $this->uri->segment(1);
+       $lng = ($this->uri->segment(2) !== null)?$this->uri->segment(2):'en';
+     }
+
+
      $menu = $menu[$lng];
      foreach ($menu as $key => $item) {
    ?>
-     <a class="<?= ($this->uri->segment(1) == $key)?'active':''?>" href="<?= base_url().$key.'/'.$lng ?>"><?= $item ?></a>
+     <a class="<?= ($page == $key)?'active':''?>" href="<?= base_url().$key.'/'.$lng ?>"><?= $item ?></a>
    <?php }?>
 
 
    <div style="display: inline-block;">
-   <a style="display: inline; padding: 0;" href="<?= base_url().$this->uri->segment(1)?>/en"><img src="<?= base_url() ?>assets/img/en.png"></a>
-   <a style="display: inline; padding: 0;" href="<?= base_url().$this->uri->segment(1)?>/de"><img src="<?= base_url() ?>assets/img/de.png"></a>
-   <a style="display: inline; padding: 0;" href="<?= base_url().$this->uri->segment(1)?>/ru"><img src="<?= base_url() ?>assets/img/ru.png"></a>
+   <a style="display: inline; padding: 0;" href="<?= base_url().$page?>/en"><img src="<?= base_url() ?>assets/img/en.png"></a>
+   <a style="display: inline; padding: 0;" href="<?= base_url().$page?>/de"><img src="<?= base_url() ?>assets/img/de.png"></a>
+   <a style="display: inline; padding: 0;" href="<?= base_url().$page?>/ru"><img src="<?= base_url() ?>assets/img/ru.png"></a>
    </div>
 
  </div>

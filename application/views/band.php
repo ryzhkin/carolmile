@@ -8,7 +8,7 @@ in Munich VIA "COMPROMISE" was also called.
 As a part of ensemble many known acted
 musicians, such as: Boris Laperashvili, brothers
 Stanislav and Vladimir Schatz, Nikolay Pitkevich, and
-the artistic director, the drummer, multi -
+the artistic director, the drummer, multi
 - instrumentalist and singer Eduard Miketin.
 </p>
 <p>
@@ -72,8 +72,8 @@ Weihnachten, Silvester  und an Korporativen auf.
 назад  в  Мюнхене  и   называлась   " КОМПРОМИСС ".
 В   составе   ансамбля   выступали    многие   известные
 музыканты , такие  как:   Борис  Лаперашвили,    братья
-Станислав  и   Владимир  Шатц ,   Николай Питкевич, и
-художественный  руководитель,   барабанщик,   мульти-
+Станислав  и   Вадим  Шатц ,   Николай Питкевич, и
+художественный  руководитель,   барабанщик,   мульти
 - инструменталист и певец - Эдуард Микетин. В данный
 момент, основой костяк группы составляют:   Антонина
 Ковальчук - вокал,  Якуб   Журовский - скрипка,    труба,
@@ -146,7 +146,7 @@ $s = [
            </td>
            <td style="width: 25%; border: none; vertical-align: top;">
                <div style="" class="cm-photo-label1">Jakub Zhurovsky</div>
-               <div style="" class="cm-photo-label2">violine, trompete, sänger</div>
+               <div style="" class="cm-photo-label2">violin, trumpet, vocal</div>
            </td>
 
            <td style="width: 25%; border: none; vertical-align: top;">
@@ -154,18 +154,18 @@ $s = [
            </td>
            <td style="width: 25%; border: none; vertical-align: top;">
                <div style="" class="cm-photo-label1">Yuri Taranovich</div>
-               <div style="" class="cm-photo-label2">lead- & rhythmus-gitarre</div>
+               <div style="" class="cm-photo-label2">lead and rhythm guitar</div>
            </td>
        </tr>
 
        <tr>
-           <td style="width: 25%; border: none; vertical-align: top;">
-               <img style="width:100%;" src="<?= base_url() ?>assets/img/player11_1.jpg">
+         <!--  <td style="width: 25%; border: none; vertical-align: top;">
+               <img style="width:100%;" src="<?/*= base_url() */?>assets/img/player11_1.jpg">
            </td>
            <td style="width: 25%; border: none; vertical-align: top;">
                <div style="" class="cm-photo-label1">Olga Dudkova</div>
                <div style="" class="cm-photo-label2">vocal, keyboards</div>
-           </td>
+           </td>-->
 
            <td style="width: 25%; border: none; vertical-align: top;">
                <img style="width:100%;" src="<?= base_url() ?>assets/img/player12_2.jpg">

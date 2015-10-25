@@ -68,7 +68,7 @@ body {
   font-size: 1rem;
   line-height: 22px;
   line-height: 1.375rem;
-  color: #585858;
+  color: #000000;
   font-weight: 400;
   background: #ffffff;
 }
@@ -292,7 +292,7 @@ table tfoot td,
 table thead th,
 table tbody th,
 table tfoot th {
-  color: #585858;
+  color: #000000;
   padding: .8em .5em;
   border-bottom: 1px solid #e9e9e9;
 }

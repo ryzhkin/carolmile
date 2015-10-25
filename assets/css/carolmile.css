@@ -15,7 +15,7 @@
 
 .cm-main {
   background-image: url("../img/bg2.jpg");
-  background-repeat: repeat-yt;
+  background-repeat: repeat-y;
   background-size: 100%;
   background-attachment: fixed;
 }
@@ -24,7 +24,7 @@
   background-image: url("../img/bg-menu.png");
   height: 80px;
   width: 100%;
-  color: #ffffff;
+  color: #ffea00;
 
   z-index: 1000;
   display: block;
@@ -44,19 +44,19 @@
   /*margin: auto;
   width: 866px;*/
   height: 80px;
-  /*border: solid #ffffff 1px;*/
+  /*border: solid #ffea00 1px;*/
   text-align: center;
 }
 
 .cm-menu-top-links a {
   margin-top: 25px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #ffea00;
   text-decoration: none;
   line-height: 30px;
   padding-left: 30px;
   padding-right: 30px;
-  /*border-left: solid #ffffff 1px;*/
+  /*border-left: solid #ffea00 1px;*/
   display: inline-block;
   font-size: 14px;
   font-family: arial, helvetica, sans-serif;
@@ -114,7 +114,7 @@
 
 .cm-logo {
   height: 216px;
-  background-image: url("../img/logo5.png");
+  background-image: url("../img/logo6.png");
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 20px;
@@ -122,12 +122,12 @@
 
 .cm-text {
  text-align: center;
- color: #ffffff;
+ color: #ffea00;
  font-family: arial, helvetica, sans-serif;
- font-size: 12px;
- font-weight: bold;
+ font-size: 18px;
+ /*font-weight: bold;*/
  margin-top: 20px;
- line-height: 18px;
+ /*line-height: 18px;*/
 }
 
 .cm-band-content {
@@ -140,10 +140,10 @@
 }
 
 .cm-head, .cm-head-gallery  {
-   font-family: "Times New Roman";
+   font-family: arial, helvetica, sans-serif;
    font-size: 20px;
    font-weight: bold;
-   color: #4a4a4a;
+   color: #000000;
    margin-bottom: 18px;
    display: block;
 }
@@ -155,7 +155,7 @@
 .cm-band-content-text {
    font-family: Arial;
    font-size: 12px;
-   color: #4a4a4a;
+   color: #000000;
    line-height: 18px;
    font-weight: 600;
 }
@@ -202,15 +202,15 @@
 }
 
 .cm-photo-label1, .cm-photo-label2 {
-  font-family: "Times New Roman";
-  font-size: 18px;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 16px;
   text-transform: capitalize;
   padding: 5px;
-  color: #4a4a4a;
+  color: #000000;
 }
 
 .cm-photo-label2 {
- font-size: 14px;
+ font-size: 12px;
  text-transform: uppercase;
  padding-top: 0px;
 }
@@ -229,13 +229,13 @@
    font-family: arial, helvetica, sans-serif;
    font-weight: bold;
    font-size: 14px;
-   color: #4a4a4a;
+   color: #000000;
 }
 
 .cm-contact-form input, .cm-contact-form textarea {
   background-color: transparent;
   background-image: url("../img/bg-contact-input.png");
-  border: solid #4a4a4a 1px;
+  border: solid #000000 1px;
   width: 100%;
   min-width: 100%;
   max-width: 100%;
@@ -251,9 +251,9 @@
 .cm-submit {
    width: 80px;
    height: 35px;
-   background-color: #4a4a4a;
+   background-color: #000000;
    border: none;
-   color: #ffffff;
+   color: #ffea00;
    font-family: arial, helvetica, sans-serif;
    font-size: 14px;
 }
@@ -266,7 +266,7 @@
     font-family: arial, helvetica, sans-serif;
     font-size: 14px;
     font-weight: bold;
-    color: #4a4a4a;
+    color: #000000;
 }
 
 .cm-error {
@@ -280,14 +280,14 @@
   font-family: arial, helvetica, sans-serif;
   font-size: 12px;
   font-weight: bold;
-  color: #4a4a4a;
+  color: #000000;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .cm-gallery-photo {
   height: 465px;
- /* border: solid #4a4a4a 1px;*/
+ /* border: solid #000000 1px;*/
   margin-bottom: 20px;
   background-position: center top;
   background-repeat: no-repeat;
@@ -307,7 +307,7 @@
 
 .cm-gallery .photo-title {
     text-align: center;
-    color: #4a4a4a;
+    color: #000000;
     font-family: arial, helvetica, sans-serif;
     font-weight: bold;
     font-size: 12px;
@@ -315,7 +315,7 @@
 }
 
 .cm-gallery .photo {
-    background-color: #ffffff;
+    background-color: #ffea00;
     height : 100px;
     background-position: center top;
     background-repeat: no-repeat;
@@ -325,7 +325,7 @@
 
 
 .current-photo .photo {
-   border: solid #ffffff 1px;
+   border: solid #ffea00 1px;
    /*opacity: 1;*/
 }
 
@@ -341,7 +341,7 @@
 }
 
 .cm-events .poster {
-    background-color: #ffffff;
+    background-color: #ffea00;
     height : 325px;
     background-position: center top;
     background-repeat: no-repeat;
@@ -350,7 +350,7 @@
 
 .cm-events .poster-title {
     text-align: center;
-    color: #4a4a4a;
+    color: #000000;
     font-family: arial, helvetica, sans-serif;
     font-weight: bold;
     font-size: 12px;
@@ -379,7 +379,7 @@
 }
 
 .albom-content {
-   /*border: solid #ffffff 1px;*/
+   /*border: solid #ffea00 1px;*/
    height: 460px;
 }
 
@@ -421,7 +421,7 @@
 .cm-music-player-progress, .cm-music-player-progress2 {
   float: left;
   height: 30px;
-  /*border: solid #ffffff 1px;*/
+  /*border: solid #ffea00 1px;*/
   width: 680px;
   margin-left: 10px;
   background-image: url("../img/sound-progress.png");
@@ -475,13 +475,13 @@
   font-family: arial, helvetica, sans-serif;
   font-weight: bold;
   font-size: 12px;
-  color: #4a4a4a;
+  color: #000000;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .cm-albom-list .active td{
-  color: #ffffff !important;
+  color: #ffea00 !important;
 }
 .cm-albom-list td {
   border: none;

@@ -30,21 +30,21 @@ $s = [
 </div>
 <table>
     <tr style="vertical-align: top;">
-        <td style="width: 50%; border: none; padding-top: 0;">
+        <td style="width: 30%; border: none; padding-top: 0;">
             <a style="text-decoration: none;" href="<?= base_url() ?>events/<?= $lng ?>">
-            <h4 style="color: #ffffff;"><?= $s['Events:'][$lng] ?></h4>
-            <img style="width:100%;" src="<?= base_url() ?>assets/img/131209_plakat1.jpg">
+            <h4 style="color: #ffea00;"><?= $s['Events:'][$lng] ?></h4>
+            <img style="width:100%;" src="<?= base_url() ?>assets/img/asana.jpg">
             </a>
         </td>
-        <td style="width: 50%; padding-top: 0; border: none;">
+        <td style="width: 60%; padding-top: 0; border: none;">
            <table>
                <tr style="vertical-align: top;">
                   <td style="border: none; width: 50%; padding-top: 0;">
                       <img style="width:100%;" src="<?= base_url() ?>assets/img/player1.jpg">
                   </td>
                   <td style="border: none; width: 50%; padding-top: 0;">
-                      <div style="color: #ffffff;" class="cm-photo-label1">Edward Myketin</div>
-                      <div style="color: #ffffff;" class="cm-photo-label2">künstlerischer leiter, multi-instrumentalist, schlagzeuger & sänger</div>
+                      <div style="color: #ffea00;" class="cm-photo-label1">Eduard Miketin</div>
+                      <div style="color: #ffea00;" class="cm-photo-label2">artistic director, multi-instrumentalist, DRUMS and VOCAL</div>
                   </td>
                </tr>
 
@@ -53,8 +53,8 @@ $s = [
                        <img style="width:100%;" src="<?= base_url() ?>assets/img/player3.jpg">
                    </td>
                    <td style="border: none; width: 50%; padding-top: 0;">
-                       <div style="color: #ffffff;" class="cm-photo-label1">Antonina Kovalchuk</div>
-                       <div style="color: #ffffff;" class="cm-photo-label2">gesang</div>
+                       <div style="color: #ffea00;" class="cm-photo-label1">Antonina Kovalchuk</div>
+                       <div style="color: #ffea00;" class="cm-photo-label2">VOCAL</div>
                    </td>
                </tr>
 
@@ -64,8 +64,8 @@ $s = [
                        <img style="width:100%;" src="<?= base_url() ?>assets/img/player2.jpg">
                    </td>
                    <td style="border: none; width: 50%; padding-top: 0;">
-                       <div style="color: #ffffff;" class="cm-photo-label1">Michael Koifman</div>
-                       <div style="color: #ffffff;" class="cm-photo-label2">bass gitarre, sänger, rhythmus-synthesizer</div>
+                       <div style="color: #ffea00;" class="cm-photo-label1">Mikchail Koifman</div>
+                       <div style="color: #ffea00;" class="cm-photo-label2">bass guitar, VOCAL, rhythm synthesizer</div>
                    </td>
                </tr>
 
@@ -75,8 +75,8 @@ $s = [
                        <img style="width:100%;" src="<?= base_url() ?>assets/img/player4_1.jpg">
                    </td>
                    <td style="border: none; width: 50%; padding-top: 0;">
-                       <div style="color: #ffffff;" class="cm-photo-label1">Paul Bishkoy</div>
-                       <div style="color: #ffffff;" class="cm-photo-label2">gitarre, akkordeon, gesang, arrangeuf</div>
+                       <div style="color: #ffea00;" class="cm-photo-label1">Paul Bishkoy</div>
+                       <div style="color: #ffea00;" class="cm-photo-label2">Guitar Accordion, Vocal, Arranger</div>
                    </td>
                </tr>
 
@@ -86,8 +86,8 @@ $s = [
                        <img style="width:100%;" src="<?= base_url() ?>assets/img/player5_1.jpg">
                    </td>
                    <td style="border: none; width: 50%; padding-top: 0;">
-                       <div style="color: #ffffff;" class="cm-photo-label1">Mikhail Prizmazonov</div>
-                       <div style="color: #ffffff;" class="cm-photo-label2">ton-ingenieur</div>
+                       <div style="color: #ffea00;" class="cm-photo-label1">Mikhail Prizmazonov</div>
+                       <div style="color: #ffea00;" class="cm-photo-label2">SOUND PRODUCER</div>
                    </td>
                </tr>
 

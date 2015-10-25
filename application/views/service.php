@@ -14,7 +14,7 @@ $text = array(
      All you need to do is simply contact with us !!!
      </h4>
      <h3>
-     As an example - Set-lit one of our performances:
+     As an example - list one of our performances:
      </h3>
 
     ',
@@ -47,7 +47,7 @@ $text = array(
      Все что Вам нужно, это просто связатся с нами!!!
      </h4>
 
-    <h3>В качестве примера - сет-лит одного из наших выступлений:</h3>
+    <h3>В качестве примера - лист одного из наших выступлений:</h3>
     ',
 );
 
