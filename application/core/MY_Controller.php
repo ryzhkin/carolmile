@@ -14,9 +14,13 @@ class MY_Controller extends CI_Controller {
         $this->sait_config = $this->db->query("SELECT * FROM config");
         $this->sait_config = $this->sait_config->result_array();
 
-        if (!$this->ion_auth->is_admin()) {
+
+
+
+
+        if ($this->router->fetch_class() !== 'admin') {
           $off = Common::getParamByName($this->sait_config, 'Сайт включен');
-          //Common::xlog('test', $off['value']);
+         // Common::xlog('test', $off['value']);
           //Common::xlog('test', in_array($off['value'], array('true', 'да', 'включен', '1', 1, true)));
           if (!in_array($off['value'], array('true', 'да', 'включен', '1'))) {
             //Common::xlog('test', $off);
