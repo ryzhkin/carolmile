@@ -7,7 +7,7 @@
 in Munich VIA "COMPROMISE" was also called.
 As a part of ensemble many known acted
 musicians, such as: Boris Laperashvili, brothers
-Stanislav and Vladimir Schatz, Nikolay Pitkevich, and
+Stanislav and Vladislav Schatz, Nikolay Pitkevich, and
 the artistic director, the drummer, multi
 - instrumentalist and singer Eduard Miketin.
 </p>
@@ -32,7 +32,7 @@ New year, and also acts on office parties.
 München gegründet und hieß erstmal “KOMPROMISS”.
 Während dessen traten in dem Ensamble viele  berühmte
 Musiker wie zum  Beispiel:  Boris   Laperashvili, Brüder
-Stanislav,  Vladimir  Schatz,   Nicholas  Pitkevich, sowie
+Stanislav,  Vladislav  Schatz,   Nicholas  Pitkevich, sowie
 der     künstlerische    Leiter,   der   Schlagzeuger,   Multi
 -Instrumentalist  und   Sänger - Edward Myketin. Derzeit
 besteht das  Rückgrat der Band aus: Antonina Kovalchuk
@@ -72,7 +72,7 @@ Weihnachten, Silvester  und an Korporativen auf.
 назад  в  Мюнхене  и   называлась   " КОМПРОМИСС ".
 В   составе   ансамбля   выступали    многие   известные
 музыканты , такие  как:   Борис  Лаперашвили,    братья
-Станислав  и   Вадим  Шатц ,   Николай Питкевич, и
+Станислав  и   Владислав Шатц ,   Николай Питкевич, и
 художественный  руководитель,   барабанщик,   мульти
 - инструменталист и певец - Эдуард Микетин. В данный
 момент, основой костяк группы составляют:   Антонина

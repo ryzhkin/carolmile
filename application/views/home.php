@@ -43,7 +43,7 @@ $s = [
                       <img style="width:100%;" src="<?= base_url() ?>assets/img/player1.jpg">
                   </td>
                   <td style="border: none; width: 50%; padding-top: 0;">
-                      <div style="color: #ffea00;" class="cm-photo-label1">Eduard Miketin</div>
+                      <div style="color: #ffea00;" class="cm-photo-label1">Eduard Myketyn</div>
                       <div style="color: #ffea00;" class="cm-photo-label2">artistic director, multi-instrumentalist, DRUMS and VOCAL</div>
                   </td>
                </tr>
