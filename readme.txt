@@ -6,7 +6,6 @@ project carolmile
    user     : admin
    password : 12345678 
 
-
 2) Как добавить новое событие на сайте?   
    Видео инструкция: http://screencast.com/t/pMuCvvvv
 
@@ -15,3 +14,6 @@ project carolmile
 
 4) Как добавить новые песни и новые альбомы на сайте?   
    Видео инструкция: http://screencast.com/t/93KUORBMp2K0
+
+5) Как включать/выключать сайт?   
+   Видео инструкция: http://screencast.com/t/yoRZ7tVQ

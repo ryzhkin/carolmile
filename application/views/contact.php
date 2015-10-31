@@ -4,7 +4,7 @@
         <div class="cm-say"></div>
         <div style="margin-top: 155px;">
            <p class="cm-contact-contact">
-               EDUARD MIKETIN
+               EDUARD MYKETYN
            </p>
             <p class="cm-contact-contact">
                 Carol Mile<br/>
